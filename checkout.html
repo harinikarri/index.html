@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Checkout</title>
+
+<style>
+.container{
+    max-width:500px;
+    margin:auto;
+    padding:20px;
+}
+input, textarea, select{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+}
+button{
+    width:100%;
+    padding:12px;
+    background:green;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>📦 Checkout</h2>
+
+<input type="text" id="name" placeholder="Full Name">
+<input type="text" id="phone" placeholder="Phone">
+<textarea id="address" placeholder="Address"></textarea>
+<h2>Payment Method</h2>
+<select id="payment" onchange="showQR()">
+    <option value="cod">Cash on Delivery</option>
+    <option value="upi">UPI</option>
+    <option value="card">Card</option>
+</select>
+
+<div id="qr-box" style="display:none; text-align: center; margin-top: 20px;">
+    <h3>💳 Scan & Pay</h3>
+    <img src="upi-qr.jpg.jpeg" width="200"
+         style="border:2px solid #ccc; border-radius:10px;">
+</div>
+</div>
+
+<h3 id="total"></h3>
+
+<button onclick="placeOrder()">Place Order</button>
+
+</div>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let total = cart.reduce((sum, item) => sum + item.price, 0);
+
+document.getElementById("total").innerText = "Total: ₹" + total;
+
+function placeOrder(){
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let address = document.getElementById("address").value;
+
+    if(name=="" || phone=="" || address==""){
+        alert("Fill all details");
+        return;
+    }
+
+    alert("🎉 Order Placed Successfully!");
+
+    localStorage.removeItem("cart");
+
+    window.location.href = "index.html";
+}
+function showQR(){
+
+    let payment = document.getElementById("payment").value;
+    let qrBox = document.getElementById("qr-box");
+
+    if(payment === "upi"){
+        qrBox.style.display = "block";
+    } else {
+        qrBox.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

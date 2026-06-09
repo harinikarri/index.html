@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - ABHK Fashions</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .logo{
+        width:50px;
+        height:50px;
+        border-radius: 50;
+        object-fit: cover;
+    }
+
+    .logo-section{
+        display:flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+.contact-section{
+    padding:60px 20px;
+    text-align:center;
+}
+
+.contact-section h2{
+    color:gold;
+    margin-bottom:25px;
+}
+
+.contact-box{
+    background:#111;
+    border:2px solid gold;
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 600px;
+    margin:0 auto 40px auto;
+}
+
+.contact-box p{
+    margin:15px 0;
+    font-size:18px;
+    color:white;
+}
+
+.contact-form{
+    max-width:600px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:12px;
+    border:2px solid gold;
+    border-radius:8px;
+    background:#111;
+    color:white;
+}
+
+.contact-form button{
+    background:gold;
+    color:black;
+    border:none;
+    padding:12px;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.contact-form button:hover{
+    background:white;
+}
+.whatsapp-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#25D366;
+    color:white;
+    padding:12px 20px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+body{
+    background: black;
+    color:white;
+}
+</style>
+
+<body>
+
+<header>
+    <div class="logo-section">
+        <img src="Logo.png.jpeg" alt="Logo" class="logo">
+        <h1>ABHK Fashions</h1>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="contact-section">
+
+    <h2>📞 Contact Us</h2>
+
+    <div class="contact-box">
+
+        <p><strong>📧 Email:</strong> abhkfashions@gmail.com</p>
+
+        <p><strong>📱 Phone:</strong> +91 9014706054</p>
+
+        <p><strong>📍 Address:</strong> Andhra Pradesh, India</p>
+
+        <p><strong>🕒 Working Hours:</strong> 9:00 AM - 8:00 PM</p>
+
+    </div>
+
+    <h2>💬 Send Us a Message</h2>
+
+    <form class="contact-form">
+
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="email" placeholder="Your Email" required>
+
+        <input type="tel" placeholder="Your Phone Number">
+
+        <textarea rows="5" placeholder="Your Message"></textarea>
+
+        <button type="submit">Send Message</button>
+
+    </form>
+    <a href="https://wa.me/919014706054" class="whatsapp-btn">
+        Whatsapp Us
+    </a>
+
+</section>
+
+<footer>
+    <p>© 2026 ABHK Fashions. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

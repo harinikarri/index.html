@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dresses - ABHK Fashions</title>
+<style>
+    .category-section{
+    padding:50px 20px;
+    background-color: #111;
+}
+
+.section-title{
+    text-align:center;
+    color:gold;
+    margin-bottom:40px;
+    font-size:40px;
+}
+
+.product-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.product{
+    width:280px;
+    background:#111;
+    border:2px solid gold;
+    border-radius:15px;
+    padding:15px;
+    text-align:center;
+}
+
+.product img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.product h3{
+    color:gold;
+    margin-top:10px;
+}
+
+.price{
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.product button{
+    background:gold;
+    color:black;
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.product:hover{
+    transform:translateY(-8px);
+    transition:0.3s;
+    box-shadow:0 0 20px gold;
+}
+</style>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<section class="category-section">
+    <h2 class="section-title">👗 Trendy Dresses Collection 👗</h2>
+
+    <div class="product-container">
+
+        <div class="product">
+            <img src="image11.jpg.jpeg" alt="">
+            <h3>Floral Dress</h3>
+            <p class="price">₹899</p>
+            <button  type="button" onclick="addToWishlist('Floral Dress',899)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Floral Dress',899)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image17.jpg.jpeg" alt="">
+            <h3>Maxi Dress</h3>
+            <p class="price">₹799</p>
+            <button  type="button" onclick="addToWishlist('Maxi Dress',799)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Maxi Dress',799)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image12.jpg.jpeg" alt="">
+            <h3>Party Wear Dress</h3>
+            <p class="price">₹999</p>
+            <button  type="button" onclick="addToWishlist('Party Wear Dress',999)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Party Wear Dress',999)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image13.jpg.jpeg" alt="">
+            <h3>Casual Dress</h3>
+            <p class="price">₹799</p>
+            <button  type="button" onclick="addToWishlist('Casual Dress',799)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Casual Dress',799)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image14.jpg.jpeg" alt="">
+            <h3>A-Line Dress</h3>
+            <p class="price">₹899</p>
+            <button  type="button" onclick="addToWishlist('A-Line Dress',899)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('A-Line Dress',899)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image15.jpg.jpeg" alt="">
+            <h3>Midi Dress</h3>
+            <p class="price">₹690</p>
+            <button  type="button" onclick="addToWishlist('Midi Dress',690)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Midi Dress',690)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image16.jpg.jpeg" alt="">
+            <h3>Denim Dress</h3>
+            <p class="price">₹499</p>
+            <button  type="button" onclick="addToWishlist('Denim Dress',499)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Denim Dress',499)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image18.jpg.jpeg" alt="">
+            <h3>Ethnic Dress</h3>
+            <p class="price">799</p>
+            <button  type="button" onclick="addToWishlist('Ethnic Dress',799)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Ethnic Dress',799)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image19.jpg.jpeg" alt="">
+            <h3>Printed Dress</h3>
+            <p class="price">₹999</p>
+           <button  type="button" onclick="addToWishlist('Printed Dress',999)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Printed Dress',999)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image40.jpg.jpeg" alt="">
+            <h3>Designer Dress</h3>
+            <p class="price">₹2,499</p>
+            <button  type="button" onclick="addToWishlist('Designer Dress',2,499)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Designer Dress',999)">🛒 Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 ABHK Fashions</p>
+</footer>
+ <script>
+function addToWishlist(name, price){
+
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+    wishlist.push({name, price});
+
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+    alert("Added to Wishlist ❤️");
+}
+function addToCart(name, price, image){
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({ name, price, image });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert("Added to Cart 🛒");
+}
+</script>  
+</body>
+</html>

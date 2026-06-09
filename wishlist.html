@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wishlist - ABHK Fashions</title>
+
+<style>
+body{
+    font-family:Arial;
+    text-align:center;
+}
+
+.item{
+    border:1px solid gold;
+    margin:10px auto;
+    padding:15px;
+    max-width:300px;
+    border-radius:10px;
+    background:#111;
+    color:white;
+}
+
+button{
+    margin-top:10px;
+    padding:5px 10px;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h2>❤️ My Wishlist</h2>
+
+<div id="wishlist-items"></div>
+
+<script>
+let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+let container = document.getElementById("wishlist-items");
+
+wishlist.forEach((item, index) => {
+
+    let div = document.createElement("div");
+    div.className = "item";
+
+    div.innerHTML = `
+        <img src="${item.image}" width="100" style="border-radius:10px;">
+        <h3>${item.name}</h3>
+        <p>₹${item.price}</p>
+        <button onclick="removeItem(${index})">Remove</button>
+    `;
+
+    container.appendChild(div);
+});
+
+function removeItem(index){
+    wishlist.splice(index, 1);
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+    location.reload();
+}
+</script>
+
+</body>
+</html>

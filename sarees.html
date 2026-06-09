@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sarees - ABHK Fashions</title>
+<style>
+    .category-section{
+    padding:50px 20px;
+    background-color: #111;
+}
+
+.section-title{
+    text-align:center;
+    color:gold;
+    margin-bottom:40px;
+    font-size:40px;
+}
+
+.product-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.product{
+    width:280px;
+    background:#111;
+    border:2px solid gold;
+    border-radius:15px;
+    padding:15px;
+    text-align:center;
+}
+
+.product img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.product h3{
+    color:gold;
+    margin-top:10px;
+}
+
+.price{
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.product button{
+    background:gold;
+    color:black;
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.product:hover{
+    transform:translateY(-8px);
+    transition:0.3s;
+    box-shadow:0 0 20px gold;
+}
+</style>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<section class="category-section">
+    <h2 class="section-title">✨ Premium Sarees Collection ✨</h2>
+
+    <div class="product-container">
+
+        <div class="product">
+            <img src="image38.jpg.jpeg" alt="">
+            <h3>Banarasi Silk Saree</h3>
+            <p class="price">₹2,999</p>
+            <button type="button" onclick="addToWishlist('Banarasi Silk Saree',2,999)">❤️ Add to wishlist</button>
+            <button type="button" onclick="addToCart('Banarasi Silk Saree',2,999)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image37.jpg.jpeg" alt="">
+            <h3>Kanchipuram Saree</h3>
+            <p class="price">₹1,499</p>
+            <button  type="button" onclick="addToWishlist('Kanchipuram Saree',1,499)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Kanchipuram Saree',1,999)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image39.jpg.jpeg" alt="">
+            <h3>Cotton Saree</h3>
+            <p class="price">₹999</p>
+            <button  type="button" onclick="addToWishlist('Cotton Saree',999)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Cotton Saree',999)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image31.jpg.jpeg" alt="">
+            <h3>Georgette Saree</h3>
+            <p class="price">₹1,499</p>
+            <button  type="button" onclick="addToWishlist('Georgette Saree',1,499,'images/image31')">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Georgette Saree',1,499)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image32.jpg.jpeg" alt="">
+            <h3>Party Wear Saree</h3>
+            <p class="price">₹1000</p>
+            <button  type="button" onclick="addToWishlist('Party Wear Saree',1000)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Party Wear Saree',1000)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image36.jpg.jpeg" alt="">
+            <h3>Designer Saree</h3>
+            <p class="price">₹2,499</p>
+            <button  type="button" onclick="addToWishlist('Designer Saree',2,499)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Designer Saree',2,499)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image35.jpg.jpeg" alt="">
+            <h3>Printed Saree</h3>
+            <p class="price">₹1,199</p>
+            <button  type="button" onclick="addToWishlist('Printed Saree',1,199)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Printed Saree',1,199)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image34.jpg.jpeg" alt="">
+            <h3>Wedding Saree</h3>
+            <p class="price">₹4,999</p>
+            <button  type="button" onclick="addToWishlist('Wedding Saree',4,999)">❤️ Add to wishlist</button>
+            <button type="button" onclick="addToCart('Wedding Saree',4,999)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image30.jpg.jpeg" alt="">
+            <h3>Chiffon Saree</h3>
+            <p class="price">₹1,599</p>
+            <button  type="button" onclick="addToWishlist('Chiffon Saree',1,599)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Chiffon Saree',1,599)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="img41.jpg.jpeg" alt="">
+            <h3>Embroidered Saree</h3>
+            <p class="price">₹2,299</p>
+            <button  type="button" onclick="addToWishlist('Embroidered Saree',2,299)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Embroidered Saree',2,999)">🛒 Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 ABHK Fashions</p>
+</footer>
+ <script>
+function addToWishlist(name, price){
+
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+    wishlist.push({name, price});
+
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+    alert("Added to Wishlist ❤️");
+}
+function addToCart(name, price, image){
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({ name, price, image });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert("Added to Cart 🛒");
+}
+function searchProduct(){
+
+    let input = document.getElementById("searchInput").value.toLowerCase();
+
+    let products = document.querySelectorAll(".product");
+
+    products.forEach(product => {
+
+        let name = product.querySelector("h3").innerText.toLowerCase();
+
+        if(name.includes(input)){
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+</script>  
+</body>
+</html>

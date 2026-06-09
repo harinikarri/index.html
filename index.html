@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ABHK Fashions</title>
+<style>
+    *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#000;
+color:white;
+}
+
+header{
+background:#111;
+padding:15px 30px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:2px solid gold;
+}
+
+.logo-section{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo{
+width:60px;
+height:60px;
+border-radius:50%;
+}
+
+h1{
+color:gold;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:gold;
+}
+
+.hero{
+text-align:center;
+padding:80px 20px;
+background:linear-gradient(to right,#111,#000);
+}
+
+.hero h2{
+color:gold;    
+font-size:45px;
+margin-bottom: 15px;
+}
+
+.hero p{
+color: white;    
+margin-bottom:25px;
+font-size:22px;
+}
+
+.hero-btn{
+background:gold;
+color:black;
+padding:12px 25px;
+margin:10px;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+.hero-btn:hover{
+    background: white;
+    color: black;
+}
+.shop-categories{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    padding:60px 20px;
+    margin-top: 100px;
+}
+
+.category{
+    width:280px;
+    background:#111;
+    border:2px solid gold;
+    border-radius:15px;
+    padding:15px;
+    text-align:center;
+    transition: 0.4s;
+}
+
+.category img{
+    width:100%;
+    height:400px;    
+    object-fit:cover; 
+    border-radius:10px;
+    background:white;
+}
+
+.category .btn{
+    display:inline-block;
+    background: gold;
+    color: #000;
+    padding:12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+    margin-top:15px;
+}
+.top-icons{
+    text-align:center;
+    margin-top:10px;
+}
+
+.top-icons a{
+    color:gold;
+    text-decoration:none;
+    font-weight:bold;
+    margin:0 15px;
+}
+
+
+.offers{
+display:flex;
+justify-content:center;
+gap:20px;
+padding:50px;
+flex-wrap:wrap;
+}
+
+.offer-box{
+width:280px;
+background:#111;
+border:2px solid gold;
+padding:20px;
+text-align:center;
+border-radius:10px;
+}
+.search-box{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
+
+.search-box input{
+    padding:8px;
+    width:250px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.search-box button{
+    padding:8px 12px;
+    cursor:pointer;
+}
+
+footer{
+background:#111;
+color:white;
+padding:20px;
+display: flex;
+justify-content:space-between;
+align-items:center;
+border-top:2px solid gold;
+flex-wrap: wrap;
+}
+.footer-right a{
+    color:white;
+    margin-left: 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+.footer-right a:hover{
+    color:gold;
+}
+</style>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo-section">
+        <img src="Logo.png.jpeg" alt="Logo" class="logo">
+        <h1>ABHK Fashions</h1>
+    </div>
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search.....">
+        <button onclick="searchProduct()">🔍</button>
+    </div>
+    <div class="top-icons">
+       <a href="wishlist.html">❤️ Wishlist</a>
+       <a href="cart.html">🛒 Cart</a>
+    </div>
+</header>
+    <section class="hero">
+    <h2>✨ ABHK Fashions Collection ✨</h2>
+    <p>Exclusive Collections Crafted For Every Occasion</p>
+    <a href="#categories" class="hero-btn">Shop Now</a>
+</section>
+      <section class="shop-categories" id="categories">
+       <div class="category">
+        <img src="saree-icon.jpg.jpeg" alt="Sarees">
+        <a href="sarees.html" class="btn">Shop Sarees</a>
+    </div>
+
+    <div class="category">
+        <img src="dresses-icon.jpg.jpeg" alt="Dresses">
+        <a href="dresses.html" class="btn">Shop Dresses</a>
+    </div>
+
+    <div class="category">
+        <img src="kurtis-icon.jpg.jpeg" alt="Kurti Sets">
+        <a href="kurtis.html" class="btn">Shop Kurti Sets</a>
+    </div>
+
+    <div class="category">
+        <img src="western-icon.jpg.jpeg" alt="Western Wear">
+        <a href="western.html" class="btn">Shop Western Wear</a>
+    </div>
+
+</section>
+</section>
+        
+    </div>
+</section>
+
+<section class="offers">
+    <div class="offer-box">
+        <h3>🔥 50% OFF</h3>
+        <p>Special Fashion Sale</p>
+    </div>
+
+    <div class="offer-box">
+        <h3>🚚 Free Delivery</h3>
+        <p>Orders Above ₹1999</p>
+    </div>
+
+    <div class="offer-box">
+        <h3>💳 Secure Payments</h3>
+        <p>100% Safe Shopping</p>
+    </div>
+</section>
+    <footer>
+    <div class="footer-left">
+        <p>@2026 ABHK Fashions.</p>
+    </div>
+    <div class="footer-right">
+        <a href="https://wa.me/919014706054" target="_blank">WhatsaApp</a>
+        <a href="https://instagram.com/kavya ---0803" target="_blank">Instagram</a>
+        <a href="https://facebook.com/yourpage" target="_blank">Facebook</a>
+    </div>
+</footer>
+  <script>
+function addToWishlist(name, price){
+
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+    wishlist.push({name, price});
+
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+    alert("Added to Wishlist ❤️");
+}
+function searchProduct(){
+
+    let input = document.getElementById("searchInput").value.toLowerCase();
+
+    if(input.includes("saree")){
+        window.location.href = "sarees.html";
+    }
+
+    else if(input.includes("dress")){
+        window.location.href = "dresses.html";
+    }
+
+    else if(input.includes("kurti")){
+        window.location.href = "kurtis.html";
+    }
+
+    else if(input.includes("western")){
+        window.location.href = "western.html";
+    }
+
+    else{
+        alert("No category found!");
+    }
+}
+</script>  
+
+</body>
+</html>

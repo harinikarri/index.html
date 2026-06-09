@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Western Wear - ABHK Fashions</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .category-section{
+    padding:50px 20px;
+    background-color: #111;
+}
+
+.section-title{
+    text-align:center;
+    color:gold;
+    margin-bottom:40px;
+    font-size:40px;
+}
+
+.product-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.product{
+    width:280px;
+    background:#111;
+    border:2px solid gold;
+    border-radius:15px;
+    padding:15px;
+    text-align:center;
+}
+
+.product img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.product h3{
+    color:gold;
+    margin-top:10px;
+}
+
+.price{
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.product button{
+    background:gold;
+    color:black;
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.product:hover{
+    transform:translateY(-8px);
+    transition:0.3s;
+    box-shadow:0 0 20px gold;
+}
+</style>
+
+<body>
+<section class="category-section">
+    <h2 class="section-title">💃 Stylish Western Wear Collection 💃</h2>
+
+    <div class="product-container">
+
+        <div class="product">
+            <img src="image20.jpg.jpeg" alt="">
+            <h3>Westren top</h3>
+            <p class="price">₹499</p>
+            <button  type="button" onclick="addToWishlist('Westren top',499)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('western top',499)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image22.jpg.jpeg" alt="">
+            <h3>Mini Dress</h3>
+            <p class="price">₹999</p>
+            <button  type="button" onclick="addToWishlist('Mini Dress',999)">❤️  Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Mini Dress',999)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image29.jpg.jpeg" alt="">
+            <h3>Maxi Western Dress</h3>
+            <p class="price">₹1,799</p>
+            <button  type="button" onclick="addToWishlist('Maxi Westren Dress',1,799)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Maxi Westren Dress',1,799)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image21.jpg.jpeg" alt="">
+            <h3>Party Gown</h3>
+            <p class="price">₹899</p>
+            <button  type="button" onclick="addToWishlist('Party Gown',899)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Party Gown',899)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image24.jpg.jpeg" alt="">
+            <h3>Denim Jacket Dress</h3>
+            <p class="price">₹800</p>
+            <button  type="button" onclick="addToWishlist('Denim Jacket Dress',800)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Denim Jacket Dress',800)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image25.jpg.jpeg" alt="">
+            <h3>Off Shoulder Dress</h3>
+            <p class="price">₹900</p>
+            <button  type="button" onclick="addToWishlist('Off Shoulder Dress',900)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Off Shoulder Dress',900)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image23.jpg.jpeg" alt="">
+            <h3>Casual Western Top</h3>
+            <p class="price">₹499</p>
+            <button  type="button" onclick="addToWishlist('Casual Western Top',499)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Casual Western Top',499)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image28.jpg.jpeg" alt="">
+            <h3>Skirt & Top Set</h3>
+            <p class="price">₹999</p>
+            <button  type="button" onclick="addToWishlist('Skirt & Top Set',999)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Skirt & Top Set',999)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image26.jpg.jpeg" alt="">
+            <h3>Party Top</h3>
+            <p class="price">₹899</p>
+            <button  type="button" onclick="addToWishlist('Party Top',899)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Party Top',899)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image27.jpg.jpeg" alt="">
+            <h3>Western Jumpsuit</h3>
+            <p class="price">₹999</p>
+            <button  type="button" onclick="addToWishlist('western Jumpsuit',999)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Western Jumpsuit',999)">🛒 Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 ABHK Fashions</p>
+</footer>
+ <script>
+function addToWishlist(name, price){
+
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+    wishlist.push({name, price});
+
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+    alert("Added to Wishlist ❤️");
+}
+function addToCart(name, price, image){
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({ name, price, image });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert("Added to Cart 🛒");
+}
+function searchProduct(){
+
+    let input = document.getElementById("searchInput").value.toLowerCase();
+
+    let products = document.querySelectorAll(".product");
+
+    products.forEach(product => {
+
+        let name = product.querySelector("h3").innerText.toLowerCase();
+
+        if(name.includes(input)){
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+}
+</script>  
+
+</body>
+</html>

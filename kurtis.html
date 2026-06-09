@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kurti Sets - ABHK Fashions</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .category-section{
+    padding:50px 20px;
+    background-color: #111;
+}
+
+.section-title{
+    text-align:center;
+    color:gold;
+    margin-bottom:40px;
+    font-size:40px;
+}
+
+.product-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+}
+
+.product{
+    width:280px;
+    background:#111;
+    border:2px solid gold;
+    border-radius:15px;
+    padding:15px;
+    text-align:center;
+}
+
+.product img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.product h3{
+    color:gold;
+    margin-top:10px;
+}
+
+.price{
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.product button{
+    background:gold;
+    color:black;
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.product:hover{
+    transform:translateY(-8px);
+    transition:0.3s;
+    box-shadow:0 0 20px gold;
+}
+</style>
+<body>
+<section class="category-section">
+    <h2 class="section-title">🌸 Elegant Kurti Sets Collection 🌸</h2>
+
+    <div class="product-container">
+
+        <div class="product">
+            <img src="image7.jpg.jpeg" alt="">
+            <h3>Anarkali Kurti Set</h3>
+            <p class="price">₹1000</p>
+            <button  type="button" onclick="addToWishlist('Anarkali Kurti Set',1000)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Anarkali Kurti Set',1000)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image8.jpg.jpeg" alt="">
+            <h3>Cotton Kurti Set</h3>
+            <p class="price">₹999</p>
+            <button  type="button" onclick="addToWishlist('Cotton Kurti Set',999)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Cotton Kurti Set',999)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image10.jpg.jpeg" alt="">
+            <h3>Embroidered Kurti Set</h3>
+            <p class="price">₹1,799</p>
+            <button  type="button" onclick="addToWishlist('Embroidered Kurti Set',1,799)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Embroidered Kurti Set',1,799)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image9.jpg.jpeg" alt="">
+            <h3>Party Wear Kurti Set</h3>
+            <p class="price">₹599</p>
+            <button  type="button" onclick="addToWishlist('Party Wear Kurti Set',599)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Party Wear Kurti Set',599)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image6.jpg.jpeg" alt="">
+            <h3>Straight Kurti Set</h3>
+            <p class="price">₹1,299</p>
+            <button  type="button" onclick="addToWishlist('Straight Kurti Set',1,299)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Straight Kurti Set',1,299)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image5.jpg.jpeg" alt="">
+            <h3>Printed Kurti Set</h3>
+            <p class="price">₹1000</p>
+            <button  type="button" onclick="addToWishlist('Printed Kurti Set',1000)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Printed Kurti Set',1000)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image4.jpg.jpeg" alt="">
+            <h3>Rayon Kurti Set</h3>
+            <p class="price">₹899</p>
+            <button  type="button" onclick="addToWishlist('Rayon Kurti Set',899)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Rayon Kurti Set',899)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image3.jpg.jpeg" alt="">
+            <h3>Silk Kurti Set</h3>
+            <p class="price">999</p>
+            <button  type="button" onclick="addToWishlist('Silk Kurti Set',999)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Silk Kurti Set',999)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image2.jpg.jpeg" alt="">
+            <h3>Festive Kurti Set</h3>
+            <p class="price">₹1,899</p>
+            <button  type="button" onclick="addToWishlist('Festive Kurti Set',1,899)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Festive Kurti Set',1,899)">🛒 Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="image1.jpg.jpeg" alt="">
+            <h3>Designer Kurti Set</h3>
+            <p class="price">₹2,499</p>
+            <button  type="button" onclick="addToWishlist('Designer Kurti Set',2,499)">❤️ Add to Wishlist</button>
+            <button type="button" onclick="addToCart('Designer Kurti Set',999)">🛒 Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 ABHK Fashions</p>
+</footer>
+ <script>
+function addToWishlist(name, price){
+
+    let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+    wishlist.push({name, price});
+
+    localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+    alert("Added to Wishlist ❤️");
+}
+function addToCart(name, price, image){
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart.push({ name, price, image });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert("Added to Cart 🛒");
+}
+</script>  
+</body>
+</html>
